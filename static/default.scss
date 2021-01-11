@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+$onerem : 1rem;
+$white : white;
+:root {
+    --blue : #2e6294;
+}
+
+body {
+    background-image: url("./images/space-big-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: $onerem*1.5;
+    >header {
+        display: block;
+        font-size: $onerem + 0.5;
+        font-weight: bold;
+        letter-spacing: .1rem;
+        text-align: center;
+        padding:$onerem/2;
+    }
+    .input-group{
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+        input[type=search]{
+            background-color: var(--blue);
+            display: block;
+            width: 100%;
+            color: $white;
+            padding-left: 40px;
+            height: 40px;
+            border: none;
+            border-radius: 3px;
+            // box-shadow: inset 0 -3px 10px 1px lighten($color: #10314f, $amount: 40) ;
+            &::placeholder{
+                text-align: center;
+                font-weight:400;
+                letter-spacing: .1rem;
+                color: $white;
+                font-size: $onerem;
+                opacity: 0.7;
+            }
+            &:focus {
+                border: 2px solid lightgreen;
+                outline: none;
+            }
+            &:focus ~ #searchIcon {
+                opacity: 0.6;
+            }
+        }
+        #searchIcon {
+            width: 30px;
+            position: absolute;
+            top: 0;
+            margin: $onerem/2 ;
+            transition: opacity 1s;
+        }
+        .cls-1{
+            fill:none;
+            stroke:$white;
+            stroke-miterlimit:10;
+            stroke-width:15px;
+        }.cls-2{
+            fill:$white;
+        }
+        
+    }
+}
+
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: $onerem*2;
+    .location_time_image_group{
+        flex-basis: 40%;
+        header {
+            font-size: $onerem * 2;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: $onerem;
+        }
+        img { 
+            max-width: 450px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    .location_space{
+        flex-basis: 10%;
+    }
+    .location_conditions {
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .weather_condition{
+            display: flex;
+            justify-content: space-between;
+            max-width: 400px;
+            align-items: center;
+            margin: $onerem 0;
+            background-color: var(--blue);
+            padding-right: 20px;
+            img {
+               width: $onerem*3.4;
+            }
+            svg{
+                height: $onerem*3.4;
+                /* this padding is because the img weather condition icon has background padding of its own*/
+                padding: 10px 0;
+                padding-left: $onerem/1.4;
+            }
+        }
+    }
+}

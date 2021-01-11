@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chukwuebuka Stanley'S Weather app project</title>
+    <meta name="description" content="weather app project, seacrh the current weather conditions
+    of anywhere in the world">
+    <meta author="chukwuebuka stanley Azuka">
+    <link rel="stylesheet" href="static/default.css">
+</head>
+<body>
+    <div class="container">
+        <header> Weather Return</header>
+        <form >
+            <div class="input-group">
+                <input type="search" id="searchbar" placeholder="search location">
+                <!-- space for searchIcon -->
+                <svg id="searchIcon" data-name="searchIcon" viewBox="0 0 140.27 106.24"><title>search</title><circle class="cls-1" cx="42.35" cy="42.35" r="34.85"/><rect class="cls-2" x="157.74" y="376.61" width="15.54" height="70.18" transform="translate(-340.2 4.52) rotate(-58.8)"/></svg>
+            </div>
+        </form>
+
+        <section class="content">
+            <!-- header should be all caps -->
+                <div class="location_time_image_group">
+                        <header> LOCATION  </header>  
+                        <img src="static/day.svg" alt=" time of day of the location" srcset="">  
+                </div>
+                <!-- little space between these two,just an empty space (margin) -->
+                <div class="location_space"></div>
+                <div class="location_conditions">
+                    <div class="weather_condition">
+                        <img id="weatherCondIcon" src="static/icons/1.svg" alt="icon that represents the current weather states" srcset="">
+                        <div class="weather_text">
+                            Hazy sunshine
+                        </div>
+                    </div>
+                    <div class="weather_condition">
+                        <svg id="thermometer" enable-background="new 0 0 56.69 56.69" viewBox="0 0 56.69 56.69"  xmlns="http://www.w3.org/2000/svg">
+                            <path d="m41.741 10.852v2h-7.75v-2zm-3.25 4.359h-4.5v2h4.5zm-4.5 6.359h7.75v-2h-7.75zm4.5 2.36h-4.5v2h4.5zm-4.5 6.359h7.75v-2h-7.75zm1.208 11.396c0 5.583-4.542 10.125-10.125 10.125s-10.125-4.542-10.125-10.125c0-3.618 1.9-6.906 5-8.725v-22.954c0-2.826 2.299-5.125 5.125-5.125s5.125 2.299 5.125 5.125v22.954c3.1 1.817 5 5.106 5 8.725zm-2 0c0-3.07-1.706-5.845-4.453-7.24l-.547-.278v-24.16c0-1.724-1.402-3.125-3.125-3.125s-3.125 1.401-3.125 3.125v24.16l-.547.278c-2.747 1.396-4.453 4.171-4.453 7.24 0 4.48 3.645 8.125 8.125 8.125s8.125-3.645 8.125-8.125zm-1.666 0c0 3.561-2.897 6.458-6.459 6.458-3.561 0-6.458-2.897-6.458-6.458 0-2.919 1.972-5.482 4.796-6.233l.371-.099v-22.23h2.583v22.229l.371.1c2.825.751 4.796 3.315 4.796 6.233zm-6.139-4.305c-.154-.684-.842-1.134-1.543-.974-2.448.554-4.158 2.695-4.158 5.207 0 .711.579 1.29 1.29 1.29s1.29-.579 1.29-1.29c0-1.277.902-2.409 2.147-2.69.692-.159 1.13-.851.974-1.543z"/></svg>
+                        <div class="temperature_text">
+                            26.5 &deg;
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        <div class="covid-19_awareness">
+            <!--  make this image into an svg -->
+            <img src="static/images/mask.jpg" alt="remember to wear face mask and adhere to covid-19 guidelines" srcset="">
+            <caption> REMEMBER TO WEAR FACE MASK</caption>
+        </div>
+    </div>
+    <footer>
+        <div class="branding"> &copy; stainlezzking</div>
+        <p class="incase">
+            please if the app is not responding, that means it has reached the max request for the day, please bear with me 
+and  try again tomorrow as  it haooens because i got the cheap package from my end point provider.  Thank You
+        </p>
+    </footer>
+</body>
+</html>

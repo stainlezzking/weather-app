@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: white;
+}
+
+:root {
+  --blue: #2e6294;
+}
+
+body {
+  background-image: url("./images/space-big-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.5rem;
+}
+
+.container > header {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: .1rem;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.container .input-group {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container .input-group input[type=search] {
+  background-color: var(--blue);
+  display: block;
+  width: 100%;
+  color: white;
+  padding-left: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+}
+
+.container .input-group input[type=search]::-webkit-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.container .input-group input[type=search]:-ms-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.container .input-group input[type=search]::-ms-input-placeholder {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.container .input-group input[type=search]::placeholder {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  color: white;
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.container .input-group input[type=search]:focus {
+  border: 2px solid lightgreen;
+  outline: none;
+}
+
+.container .input-group input[type=search]:focus ~ #searchIcon {
+  opacity: 0.6;
+}
+
+.container .input-group #searchIcon {
+  width: 30px;
+  position: absolute;
+  top: 0;
+  margin: 0.5rem;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.container .input-group .cls-1 {
+  fill: none;
+  stroke: white;
+  stroke-miterlimit: 10;
+  stroke-width: 15px;
+}
+
+.container .input-group .cls-2 {
+  fill: white;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.content .location_time_image_group {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+.content .location_time_image_group header {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content .location_time_image_group img {
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+}
+
+.content .location_space {
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+}
+
+.content .location_conditions {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .location_conditions .weather_condition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 400px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0;
+  background-color: var(--blue);
+  padding-right: 20px;
+}
+
+.content .location_conditions .weather_condition img {
+  width: 3.4rem;
+}
+
+.content .location_conditions .weather_condition svg {
+  height: 3.4rem;
+  /* this padding is because the img weather condition icon has background padding of its own*/
+  padding: 10px 0;
+  padding-left: 0.71429rem;
+}
+/*# sourceMappingURL=default.css.map */
