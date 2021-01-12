@@ -43,6 +43,7 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 .container .input-group input[type=search] {
@@ -133,8 +134,8 @@ body {
 }
 
 .content .location_time_image_group {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .content .location_time_image_group header {
@@ -146,9 +147,10 @@ body {
 }
 
 .content .location_time_image_group img {
-  max-width: 450px;
+  max-width: 400px;
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 .content .location_space {
@@ -157,8 +159,8 @@ body {
 }
 
 .content .location_conditions {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,6 +171,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: bold;
 }
 
 .content .location_conditions .weather_condition {
@@ -196,5 +199,91 @@ body {
   /* this padding is because the img weather condition icon has background padding of its own*/
   padding: 10px 0;
   padding-left: 0.71429rem;
+}
+
+.covid-19_awareness {
+  font-size: .8rem;
+  background-color: #35a135;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+  margin-left: auto;
+}
+
+.covid-19_awareness img {
+  height: 2rem;
+  /* this part is irrelevant,just added so that the image will align with the text, it has extra bg at the top which is pulling it off */
+  position: relative;
+  top: -3px;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer .branding {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: .06rem;
+  background: var(--blue);
+}
+
+footer .incase {
+  color: #cccccc;
+  background: var(--blue);
+  padding: 1rem;
+  padding-top: 0;
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background-image: url("./images/space-sm-rotated.png");
+  }
+  .container {
+    padding: 0;
+  }
+  .content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content .location_space {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .content .location_time_image_group {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .content .location_time_image_group header {
+    font-size: 1.5rem;
+  }
+  .content .location_time_image_group img {
+    max-width: 350px;
+  }
+  .content .location_conditions {
+    margin-top: 1rem;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .content .location_conditions .weather_condition {
+    margin: 1rem auto;
+    width: 100%;
+  }
+  footer {
+    position: static;
+  }
 }
 /*# sourceMappingURL=default.css.map */

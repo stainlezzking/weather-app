@@ -34,6 +34,7 @@ body {
         width: 100%;
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 10px;
         input[type=search]{
             background-color: var(--blue);
             display: block;
@@ -60,6 +61,7 @@ body {
                 opacity: 0.6;
             }
         }
+        // these are styles for the search icon svg
         #searchIcon {
             width: 30px;
             position: absolute;
@@ -85,7 +87,7 @@ body {
     justify-content: space-between;
     margin-top: $onerem*2;
     .location_time_image_group{
-        flex-basis: 40%;
+        flex-basis: 50%;
         header {
             font-size: $onerem * 2;
             text-transform: uppercase;
@@ -94,19 +96,21 @@ body {
             margin-bottom: $onerem;
         }
         img { 
-            max-width: 450px;
+            max-width: 400px;
             display: block;
             margin: 0 auto;
+            width: 100%;
         }
     }
     .location_space{
         flex-basis: 10%;
     }
     .location_conditions {
-        flex-basis: 50%;
+        flex-basis: 40%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        font-weight: bold;
         .weather_condition{
             display: flex;
             justify-content: space-between;
@@ -126,4 +130,81 @@ body {
             }
         }
     }
+}
+.covid-19_awareness{
+    font-size: .8rem;
+    background-color: rgb(53, 161, 53);
+    padding: 0 $onerem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    margin-left: auto;
+    img {
+        height: $onerem * 2;
+        /* this part is irrelevant,just added so that the image will align with the text, it has extra bg at the top which is pulling it off */
+        position: relative;
+        top: -3px;
+    }
+}
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    .branding {
+        text-align: center;
+        font-size: $onerem*1.4;
+        font-weight: bold;
+        letter-spacing: .06rem;
+        background: var(--blue);
+    }
+    .incase{
+        color: darken($color: $white, $amount: 20);
+        background: var(--blue);
+        padding: $onerem;
+        padding-top: 0;
+        font-size: $onerem*0.8;
+    }
+
+}
+
+// Media Queries
+
+@media screen and (max-width: 800px){
+    body {
+        background-image: url("./images/space-sm-rotated.png");
+    }
+    .container{
+        padding: 0;
+    }
+
+.content{
+    
+    flex-wrap: wrap;
+    .location_space{
+        flex-basis: 100%;
+    }
+
+    .location_time_image_group{
+        flex-basis: 100%;
+        header {
+            font-size: $onerem * 1.5;
+        }
+        img{
+            max-width: 350px;
+        }
+     }
+    .location_conditions {
+        margin-top: $onerem;
+        flex-basis: 100%;
+        .weather_condition{
+            margin: $onerem auto;
+            width: 100%;
+        }
+    }
+}
+footer{
+    position: static;
+ }
 }
