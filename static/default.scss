@@ -9,13 +9,17 @@ $white : white;
 :root {
     --blue : #2e6294;
 }
-
+@font-face {
+    font-family: "myFirstFont";
+    src: url("./Font/Montserrat-Thin.ttf");
+  }
 body {
     background-image: url("./images/space-big-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    font-family: "myFirstFont";
 }
 .container{
     display: flex;
